@@ -37,21 +37,8 @@
         </form>
         <div class="contato_dados grid-7">
             <h3>CULTOS:</h3>
-            <div class="cultos">
-                <p>Domingos: 9:00 - 16:00 - 18:00<br>
-                    Quintas-Feiras- 19:30</p>
+            <div id="listcultos">
             </div>
-            <div class="cultos">
-                <p><b>Ministério Feminino:</b><br>
-                    Quartas-Feiras - 8:30
-                 </p>
-            </div>
-            <div class="cultos">
-                <p><b>Ministério Joven:</b><br>
-                    Sábados - 18:30
-                 </p>
-            </div>
-
             <h3>Redes Sociais</h3>
             <ul>
                 <li><a href="https://www.facebook.com/ibtdsede" target="_blank"><img src="img/facebook.svg"></a></li>
@@ -84,7 +71,16 @@
         </div>
     </div>
 </footer>
-
-    
 </body>
+<script src="jquery.min.js"></script>
+<script>
+ //console.log($('.cultos p').text());
+ var arr_cultos = ["Domingos: 9:00 - 16:00 - 18:00", "Quintas-Feiras- 19:30", "Ministério Feminino: Quartas-Feiras - 8:30", "Ministério Joven: Sábados - 18:30"];
+ var list_cultos = "";
+ for(var i of arr_cultos) {
+	//console.log(i);
+	list_cultos +=  '<div class="cultos"><p>'+i+'</p></div>';
+ }
+ $("#listcultos").html(list_cultos);
+</script>
 </html>
